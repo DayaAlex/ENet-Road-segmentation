@@ -1,0 +1,11 @@
+lightning drive path
+
+train_dataset = CamvidDataset('/teamspace/uploads/CamVid/train','/teamspace/uploads/CamVid/trainannot',augmentation('train'))
+val_dataset = CamvidDataset('/teamspace/uploads/CamVid/val','/teamspace/uploads/CamVid/valannot',augmentation('val'))
+test_dataset = CamvidDataset('/teamspace/uploads/CamVid/test','/teamspace/uploads/CamVid/testannot/',augmentation('test'))
+
+kaggle path 
+
+train_dataset = CamvidDataset('/kaggle/input/camvid-seg-12/CamVid/train/','/kaggle/input/camvid-seg-12/CamVid/trainannot/',augmentation('train'))
+val_dataset = CamvidDataset('/kaggle/input/camvid-seg-12/CamVid/val/','/kaggle/input/camvid-seg-12/CamVid/valannot/',augmentation('val'))
+test_dataset = CamvidDataset('/kaggle/input/camvid-seg-12/CamVid/test/','/kaggle/input/camvid-seg-12/CamVid/testannot/',augmentation('test'))
