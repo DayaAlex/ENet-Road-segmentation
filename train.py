@@ -1,5 +1,5 @@
 import torch
-import torch_lightning as pl
+import pytorch_lightning as pl
 from model import ENetEncoder
 from dataset import camvid_lite
 import config
