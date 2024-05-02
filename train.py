@@ -8,8 +8,8 @@ from pytorch_lightning.loggers import WandbLogger
 import wandb
 import os 
 
-
 if __name__ == "__main__":
+    os.environ['WANDB_API_KEY'] = '022c1b388c10d71b380a05f47bab773ce231dcb5'
 
     logger = WandbLogger(
         project = 'distributed training of ENet Encoder'

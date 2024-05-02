@@ -1,4 +1,4 @@
-INPUT_SIZE = 
+# INPUT_SIZE = 
 NUM_CLASSES = 10
 LEARNING_RATE = 5e-4
 WEIGHT_DECAY = 2e-4
@@ -6,9 +6,9 @@ BATCH_SIZE = 10
 NUM_EPOCHS = 3
 
 # Dataset
-TRAIN_DATA_DIR = "dataset/"
-VAL_DATA_DIR = ""
-TEST_DATA_DIR =""
+# TRAIN_DATA_DIR = "dataset/"
+# VAL_DATA_DIR = ""
+# TEST_DATA_DIR =""
 
 # Compute related
 ACCELERATOR = "gpu"
