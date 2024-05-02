@@ -12,5 +12,5 @@ NUM_EPOCHS = 3
 
 # Compute related
 ACCELERATOR = "gpu"
-DEVICES = [0, 1, 2, 3]
+DEVICES = [0]
 PRECISION = 16

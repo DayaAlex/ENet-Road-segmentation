@@ -11,9 +11,8 @@ import os
 if __name__ == "__main__":
     os.environ['WANDB_API_KEY'] = '022c1b388c10d71b380a05f47bab773ce231dcb5'
 
-    logger = WandbLogger(
-        project = 'distributed training of ENet Encoder'
-    )
+    logger = WandbLogger()
+    run = wandb.init( project = 'Module wise training script testing')
     wandb.run.name = f'epoch {config.NUM_EPOCHS}, lr is {config.LEARNING_RATE}, weight_decay is {config.WEIGHT_DECAY}'
 
     datamod = camvid_lite(config.BATCH_SIZE)
@@ -31,11 +30,13 @@ if __name__ == "__main__":
     )
 
     trainer = pl.Trainer(
-        strategy = 'ddp',
-        accelerator = config.ACCELERATOR,
-        gpus = 4,
+        # strategy = 'ddp',
+        # accelerator = config.ACCELERATOR,
+        # gpus = 1,
+        logger= logger,
         max_epochs = config.NUM_EPOCHS,
         deterministic = True, 
+        log_every_n_steps = 1,
         callbacks = [ImagePredictionLogger(val_samples)]
     )
 

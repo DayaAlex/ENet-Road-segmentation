@@ -1,0 +1,60 @@
+{
+    "os": "Linux-5.15.0-1058-aws-x86_64-with-glibc2.31",
+    "python": "3.10.10",
+    "heartbeatAt": "2024-05-02T15:06:26.007403",
+    "startedAt": "2024-05-02T15:06:25.687716",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/teamspace/studios/this_studio/ENet-Road-segmentation/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/DayaAlex/ENet-Road-segmentation.git",
+        "commit": "0c8e3733b843079718e0187f883fec697292d5be"
+    },
+    "email": "dayaalex7212@gmail.com",
+    "root": "/teamspace/studios/this_studio/ENet-Road-segmentation",
+    "host": "ip-10-192-15-218",
+    "username": "zeus",
+    "executable": "/home/zeus/miniconda3/envs/cloudspace/bin/python",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2649.5164999999997,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2499.996,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.996,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3098.078,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 2499.996,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 387.4823341369629,
+            "used": 22.312564849853516
+        }
+    },
+    "memory": {
+        "total": 15.16165542602539
+    }
+}

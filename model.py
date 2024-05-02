@@ -663,7 +663,7 @@ class ENetEncoder(pl.LightningModule):
         #print(f"Batch index: {batch_idx}, Batch size: {len(batch)}")
         X_batch, mask_batch = batch
         out = self(X_batch.float())
-        self.val_step_outputs.append(out)
+        self.val_step_outputs.append(nn.Softmax(out))
 
         val_loss = self.loss(out, mask_batch.long())
 
@@ -701,6 +701,12 @@ class ENetEncoder(pl.LightningModule):
             torch.save(checkpoint, f'./CNNEncoder_for_ENet_trained_on_Camvid_epoch{self.current_epoch}_acc{self.maxiou:.3f}.pth') #checkpoint,checkpoint path   
             self.log('New best model saved with miou:', self.maxiou)   
         self.tp, self.fp, self.fn, self.tn  = 0,0,0,0#reseting for next epoch calculation
+
+        flattened_logits = torch.flatten(torch.cat(self.val_step_outputs))
+        self.logger.experiment.log({
+            'valid/logits': wandb.Histogram(flattened_logits.cpu().numpy()),
+            'epoch': self.current_epoch
+        })
 
     def test_step(self, batch, batch_idx):
         X_batch, mask_batch = batch
