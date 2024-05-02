@@ -8,7 +8,31 @@ from pytorch_lightning.loggers import WandbLogger
 import wandb
 import os 
 
+import numpy as np
+import matplotlib.pyplot as plt
+import cv2
+from tqdm import tqdm
+from torchvision import transforms
+import math
+import random
+from torchmetrics import JaccardIndex
+import albumentations as A
+from torch.utils.data import DataLoader, Dataset
+import metrics
+
+from torch.optim.lr_scheduler import StepLR
+from PIL import Image
+import glob
+
+import wandb
+
 if __name__ == "__main__":
+    seed = 42
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+
     os.environ['WANDB_API_KEY'] = '022c1b388c10d71b380a05f47bab773ce231dcb5'
 
     logger = WandbLogger()

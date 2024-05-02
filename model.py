@@ -699,7 +699,15 @@ class ENetEncoder(pl.LightningModule):
                 'miou': self.maxiou
             } 
             torch.save(checkpoint, f'./CNNEncoder_for_ENet_trained_on_Camvid_epoch{self.current_epoch}_acc{self.maxiou:.3f}.pth') #checkpoint,checkpoint path   
+            ckpt_artifact =wandb.Artifact (
+                            "enet_encoder_ckpt"
+                                )
+            
+            ckpt_artifact.add_file(f'./CNNEncoder_for_ENet_trained_on_Camvid_epoch{self.current_epoch}_acc{self.maxiou:.3f}.pth')
+            wandb.save(f'./CNNEncoder_for_ENet_trained_on_Camvid_epoch{self.current_epoch}_acc{self.maxiou:.3f}.pth')
+            wandb.run.log_artifact(ckpt_artifact)
             self.log('New best model saved with miou:', self.maxiou)   
+        
         self.tp, self.fp, self.fn, self.tn  = 0,0,0,0#reseting for next epoch calculation
 
         flattened_prob = torch.flatten(torch.cat(self.val_step_outputs))
