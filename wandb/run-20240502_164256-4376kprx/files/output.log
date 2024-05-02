@@ -1,0 +1,113 @@
+
+
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 367/367 [00:06<00:00, 52.57it/s]
+GPU available: False, used: False
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+HPU available: False, using: 0 HPUs
+
+ 87%|██████████████████████████████████████████████████████████████████████████████████████████              | 318/367 [00:03<00:00, 93.49it/s]
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 367/367 [00:04<00:00, 85.89it/s]
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/pytorch_lightning/loggers/wandb.py:396: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+   | Name     | Type          | Params
+--------------------------------------------
+0  | loss     | loss_function | 0
+1  | init     | InitialBlock  | 412
+2  | b10      | DownRDDNeck   | 4.5 K
+3  | b11      | RDDNeck       | 4.5 K
+4  | b12      | RDDNeck       | 4.5 K
+5  | b13      | RDDNeck       | 4.5 K
+6  | b14      | RDDNeck       | 4.5 K
+7  | b20      | DownRDDNeck   | 21.9 K
+8  | b21      | RDDNeck       | 17.8 K
+9  | b22      | RDDNeck       | 17.8 K
+10 | b23      | ASNeck        | 18.8 K
+11 | b24      | RDDNeck       | 17.8 K
+12 | b25      | RDDNeck       | 17.8 K
+13 | b26      | RDDNeck       | 17.8 K
+14 | b27      | ASNeck        | 18.8 K
+15 | b28      | RDDNeck       | 17.8 K
+16 | b31      | RDDNeck       | 17.8 K
+17 | b32      | RDDNeck       | 17.8 K
+18 | b33      | ASNeck        | 18.8 K
+19 | b34      | RDDNeck       | 17.8 K
+20 | b35      | RDDNeck       | 17.8 K
+21 | b36      | RDDNeck       | 17.8 K
+22 | b37      | ASNeck        | 18.8 K
+23 | b38      | RDDNeck       | 17.8 K
+24 | enc_conv | Conv2d        | 1.5 K
+--------------------------------------------
+334 K     Trainable params
+0         Non-trainable params
+334 K     Total params
+1.339     Total estimated model params size (MB)
+
+
+Epoch 0:   3%|██▎                                                                                   | 1/37 [00:03<01:48,  0.33it/s, v_num=kprx]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Epoch 0: 100%|█████████████████████████████████████████████████████████████████████████████████████| 37/37 [01:24<00:00,  0.44it/s, v_num=kprx]
+
+
+
+
+
+Validation DataLoader 0: 100%|█████████████████████████████████████████████████████████████████████████████████| 11/11 [00:09<00:00,  1.20it/s]
+`Trainer.fit` stopped: `max_epochs=1` reached.
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/checkpoint_connector.py:145: `.test(ckpt_path=None)` was called without a model. The best model of the previous `fit` call will be used. You can pass `.test(ckpt_path='best')` to use the best model or `.test(ckpt_path='last')` to use the last model. If you pass a value, this warning will be silenced.
+
+
+100%|████████████████████████████████████████████████████████████████████████████████████████████████████████| 367/367 [00:05<00:00, 62.50it/s]
+Restoring states from the checkpoint path at ./lightning_logs/4376kprx/checkpoints/epoch=0-step=37.ckpt
+Loaded model weights from the checkpoint at ./lightning_logs/4376kprx/checkpoints/epoch=0-step=37.ckpt
+/home/zeus/miniconda3/envs/cloudspace/lib/python3.10/site-packages/pytorch_lightning/trainer/connectors/data_connector.py:441: The 'test_dataloader' does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` to `num_workers=3` in the `DataLoader` to improve performance.
+
+
+
+
+
+
+
+
+Testing DataLoader 0: 100%|████████████████████████████████████████████████████████████████████████████████████| 23/23 [00:16<00:00,  1.36it/s]
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃[1m        Test metric        [22m┃[1m       DataLoader 0        [22m┃
+┡━━━━━━━━━━━━━━━━━━━━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│[36m         test/loss         [39m│[35m     2.303584575653076     [39m│
+│[36m    test/test_accuracy     [39m│[35m    0.13394729793071747    [39m│
+└───────────────────────────┴───────────────────────────┘

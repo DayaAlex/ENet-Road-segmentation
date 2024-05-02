@@ -39,6 +39,6 @@ if __name__ == "__main__":
         log_every_n_steps = 1,
         callbacks = [ImagePredictionLogger(val_samples)]
     )
-
+    wandb.watch(model, model.loss, log= 'all', log_freq = 360 )
     trainer.fit(model, datamod)
-    trainer.test(datamodule = datamod, ckpt_path = None)
+    trainer.test(datamodule = datamod, ckpt_path = 'Best')

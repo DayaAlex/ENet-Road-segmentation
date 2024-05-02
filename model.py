@@ -663,7 +663,7 @@ class ENetEncoder(pl.LightningModule):
         #print(f"Batch index: {batch_idx}, Batch size: {len(batch)}")
         X_batch, mask_batch = batch
         out = self(X_batch.float())
-        self.val_step_outputs.append(nn.Softmax(out))
+        self.val_step_outputs.append(torch.softmax(out ,dim =1))
 
         val_loss = self.loss(out, mask_batch.long())
 
@@ -702,11 +702,14 @@ class ENetEncoder(pl.LightningModule):
             self.log('New best model saved with miou:', self.maxiou)   
         self.tp, self.fp, self.fn, self.tn  = 0,0,0,0#reseting for next epoch calculation
 
-        flattened_logits = torch.flatten(torch.cat(self.val_step_outputs))
-        self.logger.experiment.log({
-            'valid/logits': wandb.Histogram(flattened_logits.cpu().numpy()),
+        flattened_prob = torch.flatten(torch.cat(self.val_step_outputs))
+        try:
+            self.logger.experiment.log({
+            'valid/softmax': wandb.Histogram(flattened_prob),
             'epoch': self.current_epoch
-        })
+            })
+        except Exception as e:
+            print(f"Error logging to WandB: {e}")
 
     def test_step(self, batch, batch_idx):
         X_batch, mask_batch = batch

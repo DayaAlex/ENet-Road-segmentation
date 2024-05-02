@@ -1,0 +1,52 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    python_version: 3.10.10
+    cli_version: 0.16.6
+    framework: lightning
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    start_time: 1714666653.0
+    t:
+      1:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 53
+      - 55
+      - 80
+      - 103
+      2:
+      - 1
+      - 5
+      - 9
+      - 41
+      - 53
+      - 55
+      - 80
+      - 103
+      3:
+      - 17
+      - 23
+      - 37
+      4: 3.10.10
+      5: 0.16.6
+      8:
+      - 5
+      13: linux-x86_64
+C:
+  desc: null
+  value: 10
+class_weights:
+  desc: null
+  value: "tensor([ 6.0922,  4.4581, 34.0328,  3.3760, 14.6258,  9.3756, 28.3469, 29.9506,\n\
+    \        13.2160, 37.3547, 41.8958,  0.0000])"
+lr:
+  desc: null
+  value: 0.0005
+weight_decay:
+  desc: null
+  value: 0.0002

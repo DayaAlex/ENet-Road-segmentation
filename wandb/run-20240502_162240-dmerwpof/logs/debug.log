@@ -1,0 +1,30 @@
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Current SDK version is 0.16.6
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Configure stats pid to 40536
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Loading settings from /teamspace/studios/this_studio/.config/wandb/settings
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Loading settings from /teamspace/studios/this_studio/ENet-Road-segmentation/wandb/settings
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Loading settings from environment variables: {'api_key': '***REDACTED***'}
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-05-02 16:22:40,622 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program_abspath': '/teamspace/studios/this_studio/ENet-Road-segmentation/train.py', 'program': '/teamspace/studios/this_studio/ENet-Road-segmentation/train.py'}
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_init.py:_log_setup():521] Logging user logs to /teamspace/studios/this_studio/ENet-Road-segmentation/wandb/run-20240502_162240-dmerwpof/logs/debug.log
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_init.py:_log_setup():522] Logging internal logs to /teamspace/studios/this_studio/ENet-Road-segmentation/wandb/run-20240502_162240-dmerwpof/logs/debug-internal.log
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_init.py:init():561] calling init triggers
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_init.py:init():568] wandb.init called with sweep_config: {}
+config: {}
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_init.py:init():611] starting backend
+2024-05-02 16:22:40,623 INFO    MainThread:40536 [wandb_init.py:init():615] setting up manager
+2024-05-02 16:22:40,624 INFO    MainThread:40536 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-05-02 16:22:40,625 INFO    MainThread:40536 [wandb_init.py:init():623] backend started and connected
+2024-05-02 16:22:40,628 INFO    MainThread:40536 [wandb_init.py:init():715] updated telemetry
+2024-05-02 16:22:40,650 INFO    MainThread:40536 [wandb_init.py:init():748] communicating run to backend with 90.0 second timeout
+2024-05-02 16:22:40,868 INFO    MainThread:40536 [wandb_run.py:_on_init():2357] communicating current version
+2024-05-02 16:22:40,901 INFO    MainThread:40536 [wandb_run.py:_on_init():2366] got version response 
+2024-05-02 16:22:40,901 INFO    MainThread:40536 [wandb_init.py:init():799] starting run threads in backend
+2024-05-02 16:22:45,277 INFO    MainThread:40536 [wandb_run.py:_console_start():2335] atexit reg
+2024-05-02 16:22:45,277 INFO    MainThread:40536 [wandb_run.py:_redirect():2190] redirect: wrap_raw
+2024-05-02 16:22:45,277 INFO    MainThread:40536 [wandb_run.py:_redirect():2255] Wrapping output streams.
+2024-05-02 16:22:45,277 INFO    MainThread:40536 [wandb_run.py:_redirect():2280] Redirects installed.
+2024-05-02 16:22:45,278 INFO    MainThread:40536 [wandb_init.py:init():842] run started, returning control to user process
+2024-05-02 16:22:58,465 INFO    MainThread:40536 [wandb_run.py:_config_callback():1347] config_cb None None {'C': 10, 'class_weights': 'tensor([ 6.0922,  4.4581, 34.0328,  3.3760, 14.6258,  9.3756, 28.3469, 29.9506,\n        13.2160, 37.3547, 41.8958,  0.0000])', 'lr': 0.0005, 'weight_decay': 0.0002}
+2024-05-02 16:27:58,172 INFO    MainThread:40536 [wandb_run.py:_config_callback():1347] config_cb None None {'C': 10, 'class_weights': 'tensor([ 6.0922,  4.4581, 34.0328,  3.3760, 14.6258,  9.3756, 28.3469, 29.9506,\n        13.2160, 37.3547, 41.8958,  0.0000])', 'lr': 0.0005, 'weight_decay': 0.0002}
+2024-05-02 16:29:00,120 WARNING MsgRouterThr:40536 [router.py:message_loop():77] message_loop has been closed
