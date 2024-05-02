@@ -36,9 +36,9 @@ if __name__ == "__main__":
         logger= logger,
         max_epochs = config.NUM_EPOCHS,
         deterministic = True, 
-        log_every_n_steps = 1,
+        log_every_n_steps = 50,#log how many training steps 
         callbacks = [ImagePredictionLogger(val_samples)]
     )
-    wandb.watch(model, model.loss, log= 'all', log_freq = 360 )
+    wandb.watch(model, model.loss, log= 'all', log_freq = 360 )#log every 10 epoch
     trainer.fit(model, datamod)
-    trainer.test(datamodule = datamod, ckpt_path = 'Best')
+    trainer.test(datamodule = datamod, ckpt_path = None)
