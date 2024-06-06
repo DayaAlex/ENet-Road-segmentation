@@ -54,9 +54,10 @@ if __name__ == "__main__":
     )
 
     trainer = pl.Trainer(
-        # strategy = 'ddp',
-        # accelerator = config.ACCELERATOR,
-        # gpus = 1,
+         strategy = 'ddp',
+         accelerator = config.ACCELERATOR,
+         gpus = 2,
+         sync_batchnorm= True,
         logger= logger,
         max_epochs = config.NUM_EPOCHS,
         deterministic = True, 

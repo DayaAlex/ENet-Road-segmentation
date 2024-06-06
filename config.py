@@ -1,9 +1,9 @@
 # INPUT_SIZE = 
-NUM_CLASSES = 10
+NUM_CLASSES = 12
 LEARNING_RATE = 5e-4
 WEIGHT_DECAY = 2e-4
 BATCH_SIZE = 10
-NUM_EPOCHS = 1
+NUM_EPOCHS = 5
 
 # Dataset
 # TRAIN_DATA_DIR = "dataset/"
@@ -12,5 +12,5 @@ NUM_EPOCHS = 1
 
 # Compute related
 ACCELERATOR = "gpu"
-DEVICES = [0]
+DEVICES = [0,1]
 PRECISION = 16
