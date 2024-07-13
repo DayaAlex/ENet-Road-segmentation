@@ -60,8 +60,9 @@ Complete details on my thesis can be found in [here](https://drive.google.com/dr
 
 Paszke, A., Chaurasia, A., Kim, S., & Culurciello, E. (2016). Enet: A deep neural network architecture for real-time semantic segmentation. *arXiv preprint arXiv:1606.02147*.
 
-G. Varma, A. Subramanian, A. Namboodiri, M. Chandraker, and C. Jawahar, “Idd: A dataset for exploring problems of autonomous navigation in unconstrained environments,” in 2019 IEEE winter conference on applications of computer vision (WACV), pp. 1743–1751, IEEE, 2019.
+G. Varma, A. Subramanian, A. Namboodiri, M. Chandraker, and C. Jawahar, “Idd: A dataset for exploring problems of autonomous navigation in unconstrained environments,” in 2019 *IEEE winter conference on applications of computer vision (WACV), pp. 1743–1751, IEEE, 2019*.
 
 https://github.com/e-lab/ENet-training
+
 https://github.com/iArunava/ENet-Real-Time-Semantic-Segmentation
 
