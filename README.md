@@ -47,6 +47,12 @@ ENet output on Jetson TX2 could be achieved without any additional optimization,
 ![enet_tx2](https://github.com/user-attachments/assets/5c7944b7-8ffa-4629-9a92-aeb80ddaab7e)
 
 The trained models for Road segmentation were exported to ONNX and optimized using TensorRT.
+Workflow for carrying out inference on JetsonTX2 using TensorRT is show below
+ 
+ <img width="452" alt="trtinf" src="https://github.com/user-attachments/assets/68a3efcd-6235-4b73-b5f4-2e098f8af911">
+
+Ground Truth and predictions for Road Segmentation 
+
 <img width="732" alt="Screenshot 2024-06-23 at 10 08 48 PM" src="https://github.com/user-attachments/assets/a7a1bbb6-97a7-4eb2-8df1-7ef5a24dca2e">
 
 Inference statistics for the Road Segmentation models deployed on Jetson TX2 is shown below:
